@@ -12,7 +12,7 @@ spinButton.addEventListener("click", function() {
   }
   if (players.length > 0) {
     const randomIndex = Math.floor(Math.random() * players.length);
-    winner.textContent = `Host: ${players[randomIndex]}`;
+    winner.textContent = `${players[randomIndex]}`;
   } else {
     alert("Please enter at least one player.");
   }

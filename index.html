@@ -57,7 +57,7 @@
 
     #winner {
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 400;
     }
 
     .form-div {
@@ -118,7 +118,9 @@
     <div id="spinner">
       <div class="form-div">
         <form id="form">
-          <h2>Random Host:</h2>
+          <h2>Random Host:
+            <span id="winner"></span>
+          </h2>
           <input type="text" placeholder="Player 1" id="player1">
           <input type="text" placeholder="Player 2" id="player2">
           <input type="text" placeholder="Player 3" id="player3">
@@ -127,7 +129,6 @@
           <input type="text" placeholder="Player 6" id="player6">
           <input type="text" placeholder="Player 7" id="player7">
           <button type="button" id="spinButton">Spin</button>
-          <p id="winner"></p>
         </form> 
       </div>
     </div>
