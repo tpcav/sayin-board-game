@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <style>
+
+    body {
+      width: 95vw;
+      height: 100vw;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .container {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      width: 100%;
+    }
+
+    #spinner {
+      font-family: sans-serif;
+      width: 100%;
+    }
+
+    #form {
+      margin-top: 1rem;
+      width: 100vw;
+    }
+
+    input[type="text"] {
+      width: 150px;
+      height: 30px;
+      font-size: 16px;
+      margin: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0 10px;
+    }
+
+    button[type="button"] {
+      width: 80px;
+      height: 40px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="button"]:hover {
+      background-color: #46a049;
+    }
+
+    #winner {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .form-div {
+      text-align: center;
+      width: 50vw;
+    }
+
+    #question-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    #question {
+      font-size: 1rem;
+    }
+
+    #generate-button {
+      width: 100px;
+      padding: 0.75rem;
+      font-size: 16px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .how-to {
+      margin: 2rem;
+    }
+
+    .how-to p {
+      margin-left: 1rem;
+      font-size: 0.90rem;
+    }
+
+    h1 {
+      font-size: 1.rem;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- How to Play? -->
+    <div class="how-to">
+      <h1>How to Play?</h1>
+      <p>1️⃣ Enter players names. Spin to choose a random host.</p>
+      <p>2️⃣ Host generates a question to ask players. Players answer the question honestly on a piece of paper.</p>
+      <p>3️⃣ Then give their papers to the host. Who randomly reads them aloud anonymously.</p>
+      <p>4️⃣ Players guess who gave each answer. Handing in their guesses to the host.</p>
+      <p>5️⃣ Now the host tallies up everyones correct answers for points, after 5 rounds, the person with most points wins.</p>
+    </div>
+
+    <!-- Random Host -->
+    <div id="spinner">
+      <div class="form-div">
+        <form id="form">
+          <h2>Random Host:</h2>
+          <input type="text" placeholder="Player 1" id="player1">
+          <input type="text" placeholder="Player 2" id="player2">
+          <input type="text" placeholder="Player 3" id="player3">
+          <input type="text" placeholder="Player 4" id="player4">
+          <input type="text" placeholder="Player 5" id="player5">
+          <input type="text" placeholder="Player 6" id="player6">
+          <input type="text" placeholder="Player 7" id="player7">
+          <button type="button" id="spinButton">Spin</button>
+          <p id="winner"></p>
+        </form> 
+      </div>
+    </div>
+    
+    <!-- Questions -->
+    <div id="question-container">
+      <h2>Questions:</h2>
+      <p id="question"></p>
+      <button id="generate-button">Generate</button>
+    </div>
+    
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
